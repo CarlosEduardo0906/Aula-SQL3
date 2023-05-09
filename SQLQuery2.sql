@@ -1,4 +1,4 @@
---------------------------CriaÁ„o de uma FunÁ„o
+--------------------------Cria√ß√£o de uma Fun√ß√£o
 --CREATE FUNCTION F_Somar(@Num1 INT, @Num2 INT)
 --		RETURNS INT
 --AS
@@ -10,14 +10,14 @@
 
 --use Exercicios
 
---------------------------CriaÁ„o de uma FunÁ„o
+--------------------------Cria√ß√£o de uma Fun√ß√£o
 
 --CREATE FUNCTION F_Tabela ()
 --		RETURNS TABLE
 --AS
 --		RETURN(SELECT * FROM cadfun);
 
---------------------------CriaÁ„o de uma FunÁ„o
+--------------------------Cria√ß√£o de uma Fun√ß√£o
 
 --CREATE FUNCTION F_Situacao (@Nota1 FLOAT, @Nota2 FLOAT, @Nota3 FLOAT)
 --		RETURNS VARCHAR(11)
@@ -35,7 +35,7 @@
 --			RETURN(@Retorno);
 --		END
 
---------------------------CriaÁ„o de uma FunÁ„o
+--------------------------Cria√ß√£o de uma Fun√ß√£o
 
 --CREATE FUNCTION F_Situacao2 (@Nota1 FLOAT, @Nota2 FLOAT, @Nota3 FLOAT)
 --		RETURNS VARCHAR(11)
@@ -51,7 +51,7 @@
 --			RETURN(@Retorno);
 --		END
 
---------------------------CriaÁ„o de uma FunÁ„o
+--------------------------Cria√ß√£o de uma Fun√ß√£o
 
 --CREATE FUNCTION F_Situacao3 (@Nota1 FLOAT, @Nota2 FLOAT, @Nota3 FLOAT)
 --		RETURNS VARCHAR(11)
@@ -65,7 +65,7 @@
 --		END
 
 
------------------------------------------CriaÁ„o e alimentaÁ„o de uma tabela
+-----------------------------------------Cria√ß√£o e alimenta√ß√£o de uma tabela
 
 --create table Aluno (NOME varchar (15) not null ,NOTA1 float not null ,NOTA2 float not null ,NOTA3 float not null)
 --insert into Aluno (NOME, NOTA1, NOTA2 ,NOTA3)
@@ -74,12 +74,21 @@
 --					  ('Ana', 6,1,8),
 --					  ('Paulo', 8,3,10),
 --					  ('Maria', 10,5,9),
---					  ('JosÈ', 1,7,8),
---					  ('Jo„o', 3,9,7),
+--					  ('Jos√©', 1,7,8),
+--					  ('Jo√£o', 3,9,7),
 --					  ('Cristina', 5,2,6);
+
+--SELECT nome AS 'NOME',
+--		nota1 AS 'NOTA1',
+--		nota2 AS 'NOTA2',
+--		nota3 AS 'NOTA3',
+--		CAST ((nota1+nota2+nota3)/3 AS DECIMAL (3,1)) AS 'M√âDIA',
+--		dbo.F_Situacao(nota1,nota2,nota3) AS 'SITUA√á√ÉO'
+--FROM Aluno
+
 --select * from Aluno
 
 
--------------------------------SeleÁ„o de FunÁ„o
+-------------------------------Sele√ß√£o de Fun√ß√£o
 --SELECT dbo.F_Situacao3(8,6,7)
 
